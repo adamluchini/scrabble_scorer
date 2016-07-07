@@ -36,9 +36,16 @@ namespace ScrabbleScorer.Objects
 
       newDictionary.Add('K', 5);
 
+      newDictionary.Add('J', 8);
+      newDictionary.Add('X', 8);
+
+      newDictionary.Add('Q', 10);
+      newDictionary.Add('Z', 10);
+
       int scoreTotal = 0;
 
-      char[] inputArray = input.ToCharArray();
+      string upperCaseInput = input.ToUpper();
+      char[] inputArray = upperCaseInput.ToCharArray();
       for (int i = 0; i < inputArray.Length; i++){
         foreach (KeyValuePair<char, int> test in newDictionary){
           if (inputArray[i] == test.Key)
@@ -49,18 +56,6 @@ namespace ScrabbleScorer.Objects
       }
       return scoreTotal;
 
-
-      // string upperCaseInput = input.ToUpper();
-      // char[] inputArray = upperCaseInput.ToCharArray();
-      // for (int i = 0; i < inputArray.Length; i++) {
-      //   foreach (KeyValuePair<char, int> test in newDictionary) {
-      //     if (inputArray[i] == test.Key)
-      //     {
-      //       scoreTotal += test.Value;
-      //     }
-      //   }
-      // }
-      // return scoreTotal;
     }
   }
 }
