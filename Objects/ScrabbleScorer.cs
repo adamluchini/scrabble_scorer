@@ -45,7 +45,7 @@ namespace ScrabbleScorer.Objects
       int scoreTotal = 0;
 
       string upperCaseInput = input.ToUpper();
-      char[] inputArray = upperCaseInput.ToCharArray();
+      char[] inputArray = upperCaseInput.ToCharArray(); //calling ToCharArray method to put upperCaseInput into inputArray
       for (int i = 0; i < inputArray.Length; i++){
         foreach (KeyValuePair<char, int> test in newDictionary){
           if (inputArray[i] == test.Key)
