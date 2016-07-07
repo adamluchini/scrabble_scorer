@@ -8,15 +8,22 @@ namespace ScrabbleScorer.Objects
     [Fact]
     public void WordScore_5LetterWordUsing1PointLetters_5()
     {
-      string testWord = "alert";
+      string testWord = "ALERT";
       Assert.Equal(5, ScrabbleScorer.WordScore(testWord));
     }
 
     [Fact]
-    public void WordScore_5LetterWordUsing22PointLetters_7()
+    public void WordScore_5LetterWordUsing1and2PointLetters_7()
     {
-      string testWord = "edges";
+      string testWord = "EDGES";
       Assert.Equal(7, ScrabbleScorer.WordScore(testWord));
+    }
+
+    [Fact]
+    public void WordScore_5LetterWordUsing1and2and3PointLetters_8()
+    {
+      string testWord = "CLOUD";
+      Assert.Equal(8, ScrabbleScorer.WordScore(testWord));
     }
 
   }
