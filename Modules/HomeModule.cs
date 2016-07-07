@@ -1,5 +1,4 @@
 using Nancy;
-using ScrabbleScorer.Objects;
 using System.Collections.Generic;
 
 namespace ScrabbleScorer.Objects
