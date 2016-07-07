@@ -7,25 +7,28 @@ namespace ScrabbleScorer.Objects
   {
     public static int WordScore(string input)
     {
-      Dictionary<char, int> testDictionary = new Dictionary<char, int> {};
+      Dictionary<char, int> newDictionary = new Dictionary<char, int> {};
 
-      testDictionary.Add('A', 1);
-      testDictionary.Add('E', 1);
-      testDictionary.Add('I', 1);
-      testDictionary.Add('O', 1);
-      testDictionary.Add('U', 1);
-      testDictionary.Add('L', 1);
-      testDictionary.Add('N', 1);
-      testDictionary.Add('R', 1);
-      testDictionary.Add('S', 1);
-      testDictionary.Add('T', 1);
+      newDictionary.Add('A', 1);
+      newDictionary.Add('E', 1);
+      newDictionary.Add('I', 1);
+      newDictionary.Add('O', 1);
+      newDictionary.Add('U', 1);
+      newDictionary.Add('L', 1);
+      newDictionary.Add('N', 1);
+      newDictionary.Add('R', 1);
+      newDictionary.Add('S', 1);
+      newDictionary.Add('T', 1);
+
+      newDictionary.Add('D', 2);
+      newDictionary.Add('G', 2);
 
       int scoreTotal = 0;
 
       string upperCaseInput = input.ToUpper();
       char[] inputArray = upperCaseInput.ToCharArray();
       for (int i = 0; i < inputArray.Length; i++) {
-        foreach (KeyValuePair<char, int> test in testDictionary) {
+        foreach (KeyValuePair<char, int> test in newDictionary) {
           if (inputArray[i] == test.Key)
           {
             scoreTotal += test.Value;

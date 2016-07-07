@@ -11,6 +11,13 @@ namespace ScrabbleScorer.Objects
       string testWord = "alert";
       Assert.Equal(5, ScrabbleScorer.WordScore(testWord));
     }
-  }
 
+    [Fact]
+    public void WordScore_5LetterWordUsing22PointLetters_7()
+    {
+      string testWord = "edges";
+      Assert.Equal(7, ScrabbleScorer.WordScore(testWord));
+    }
+
+  }
 }
