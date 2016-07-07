@@ -26,5 +26,12 @@ namespace ScrabbleScorer.Objects
       Assert.Equal(8, ScrabbleScorer.WordScore(testWord));
     }
 
+    [Fact]
+    public void WordScore_5LetterWordUsing1and2and3and4PointLetters_13()
+    {
+      string testWord = "DUMPY";
+      Assert.Equal(13, ScrabbleScorer.WordScore(testWord));
+    }
+
   }
 }

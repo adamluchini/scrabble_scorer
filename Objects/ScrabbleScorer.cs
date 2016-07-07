@@ -28,9 +28,16 @@ namespace ScrabbleScorer.Objects
       newDictionary.Add('M', 3);
       newDictionary.Add('P', 3);
 
+      newDictionary.Add('F', 4);
+      newDictionary.Add('H', 4);
+      newDictionary.Add('V', 4);
+      newDictionary.Add('W', 4);
+      newDictionary.Add('Y', 4);
+
+      newDictionary.Add('K', 5);
+
       int scoreTotal = 0;
 
-      // string inputArray = input;
       char[] inputArray = input.ToCharArray();
       for (int i = 0; i < inputArray.Length; i++){
         foreach (KeyValuePair<char, int> test in newDictionary){
