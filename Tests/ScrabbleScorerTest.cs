@@ -5,10 +5,12 @@ namespace ScrabbleScorer.Objects
 {
   public class ScrabbleScorerTest
   {
-    public static int WordScore(string input)
+    [Fact]
+    public void WordScore_5LetterWordUsing1PointLetters_5()
     {
-      Dictionary<char, int> newDictionary = new Dictionary<char, int> {};
-      
+      string testWord = "alert";
+      Assert.Equal(5, ScrabbleScorer.WordScore(testWord));
     }
   }
+
 }
